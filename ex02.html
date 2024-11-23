@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+body {
+    background-color: rgb(8, 103, 112);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.createaccount {
+    display: grid;
+    justify-content: center;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    background-color: rgb(230, 230, 230);
+}
+
+.createaccount h1 {
+    font-size: 23px;
+}
+
+.create {
+    display: grid;
+    justify-content: end;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    background-color: rgb(230, 230, 230);
+    padding-right: 20px;
+}
+
+.create p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(24, 188, 136);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.name {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.firstname, .lastname {
+    width: 100%;
+}
+
+.name p {
+    color: rgb(48, 191, 155);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.firstname {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.lastname {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.Email {
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.Email p {
+    color: rgb(48, 191, 155);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.email {
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.gender {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.gender p {
+    color: rgb(48, 191, 155);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.gender label {
+    margin-right: 10px;
+}
+
+#SO_income select{
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#income input[type = "range"] {
+    width: 100%;
+}
+
+#file input[type = "file"] {
+    width: 100%;
+}
+
+.bio {
+    display: grid;
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-bottom: 10px; 
+}
+
+.bio p {
+    color: rgb(48, 191, 155);
+    font-size: 19px;
+    font-weight: bold;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="createaccount">
+            <h1>Create Account</h1>
+        </div>
+        <div class="name">
+            <div class="left">
+                <p>Frist name*</p>
+                <input type="text" class="firstname" placeholder="enter your first name">
+            </div>
+            <div class="right">
+                <p>Last name*</p>
+                <input type="text" class="lastname" placeholder="enter your last name">         
+            </div>
+        </div>    
+        <div class="Email">
+            <p>Email*</p>
+            <input type="text" class="email" placeholder="enter your email">
+        </div>
+        <div class="name">
+            <div class="left">
+                <p>Password*</p>
+                <input type="text" class="firstname" placeholder="enter your password">
+            </div>
+            <div class="right">
+                <p>Confirm Password*</p>
+                <input type="text" class="lastname" placeholder="enter your password again">         
+            </div>
+        </div>
+        <div class="gender">
+            <div class="left">
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>            </div>
+            <div class="right">
+                <p>Hobbies</p>
+                <input type="checkbox" id="reading" name="hobbies" value="Music">
+                <label for="reading">Music</label>
+                <input type="checkbox" id="sports" name="hobbies" value="Sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="Travel" name="hobbies" value="Travel">
+                <label for="music">Travel</label>
+                <input type="checkbox" id="Movies" name="hobbies" value="Movies">
+                <label for="music">Movies</label>
+            </div>
+        </div>
+        <div class="name">
+            <div class="left" id="SO_income">
+                <p>Source of Income</p>
+                <select>
+                    <option value="business">Business</option>
+                    <option value="business">Business</option>
+                    <option value="business">Business</option>
+                    <option value="business">Business</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+            <div class="right" id="income">
+                <p>Income</p>
+                <input type="range" min = "0" max="20000">
+            </div>
+        </div>
+        <div class="name">
+            <div class="left" id="file">
+                <p>Upload Profile Picture</p>
+                <input type="file">
+            </div>
+            <div class="right">
+                <p>Age</p>
+                <input type="text" class="lastname" placeholder="Enter your Age">         
+            </div>
+        </div>
+        <div class="bio">
+            <p>Bio</p>
+            <textarea></textarea>
+        </div>
+        <div class="create">
+            <p>Create</p>
+        </div>
+    </div>
+</body>
+</html>
